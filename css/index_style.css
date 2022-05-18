@@ -1,0 +1,61 @@
+:root{
+    --color-azul-uno: #757FB2;
+    --color-azul-dos: #aab2d5;
+    --color-azul-tres: #e9ecf8;
+    --color-azul-cuatro: #eff1fa;
+    --color-azul-cinco: #f3f5fc;
+    
+    --color-gray-uno: #343a40;
+    --color-gray-dos: #495057;
+    --color-gray-tres: #868e96;
+    --color-gray-cuatro: #adb5bd;
+    --color-gray-cinco: #ced4da;
+
+}
+*{
+    text-decoration: none;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-azul-tres);
+}
+header{
+    margin: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--color-azul-dos);
+    border-radius: 0  0 32px 32px;
+}   
+.logo{
+    width: 133px;
+    display: flex;
+    align-items: center;
+}
+.logo h1{
+    padding: 0 0 0 10px;
+}
+.logo img{
+    height: 50px;
+}
+.menu{
+    height: 100%;
+    width: calc(100% - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.otros-challengue{
+    display: flex;
+    align-items: center;
+    border: 2px #262626 solid;
+    height: 70%;
+    width: 100px;
+    justify-content: center;
+    padding: 0 20px;
+    color: white;
+    background-color: var(--color-azul-uno);
+    border-radius: 24px;
+}
