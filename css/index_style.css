@@ -23,7 +23,7 @@
 
 /*CAMBIO DEL SCROLL DE LA PAGINA*/
     ::-webkit-scrollbar{
-        width: 10px;
+        width: 0px;
         background-color: #F5F5F5;
         border-radius: 10px;
     }
@@ -41,6 +41,8 @@
 /*CAMBIOS GENERALES*/
     html {
         background-color: var(--color-gray-uno);
+        min-width: 320px;
+        width: 100%;
     }
     a{
         text-decoration: none;
@@ -55,16 +57,17 @@
 /*ZONA DEL HEADER DE LA PAGINA*/
     header{
         margin: 0 30px;
-        display: flex;
-        justify-content: space-between;
         height: 80px;
+        display: block;
+        justify-content: space-between;
         align-items: center;
         padding: 0 20px;
         background-color: var(--color-celeste-dos);
         border-radius: 0  0 32px 32px;
     }   
     .logo{
-        width: 133px;
+        height: 100%;
+        width: auto;
         display: flex;
         align-items: center;
     }
@@ -72,27 +75,9 @@
         padding: 0 0 0 10px;
     }
     .logo img{
-        height: 50px;
+        height: 60px;
     }
-    .menu{
-        height: 100%;
-        width: calc(100% - 140px);
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .otros-challengue{
-        display: flex;
-        align-items: center;
-        border: 1.5px var(--color-azul-tres) solid;
-        height: 70%;
-        width: 100px;
-        justify-content: center;
-        padding: 0 20px;
-        color: white;
-        background-color: var(--color-celeste-uno);
-        border-radius: 24px;
-    }
+
 
 main{
     height: 700px;
@@ -103,11 +88,12 @@ main{
 
 /*ZONA DE ENTRADA DE TEXTO*/
     .texto-entrada{
-        flex-grow: 3;
+        width: 70%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 35px;
+        max-width: 700px;
     }
     #entrada-textarea{
         width: 100%;
@@ -133,7 +119,7 @@ main{
     }
     .boton{
         height: 67px;
-        width: 330px;
+        width: 300px;
         font-size: 16px;
         color: var(--color-azul-tres);
         border-radius: 24px;
@@ -162,12 +148,13 @@ main{
 
 /*ZONA DE SALIDA*/
     .texto-salida{
+        width: 30%;
         background-color: white;
         padding: 35px;
         border: 1.5px var(--color-azul-tres) solid;
         border-radius: 32px;
         min-width: 300px;
-        width: 300px;
+        max-width: 450px;
     }
 
     /*SALIDA DE TEXTO SI ESTA VACIO*/
@@ -198,14 +185,14 @@ main{
         }
         #salida-texto{
             width: 100%;
-            height: 550px;
+            height: calc(100% - 70px - 30px);
             font-family: 'Inter', sans-serif;
             resize: none;
             border: none;
-            margin: 0 0 27px;
             color: var(--color-gray-dos);
             font-size: 16px;
             border-radius: 12px;
+            background-color: transparent;
         }
         #salida-texto:focus-visible{
             border: none;
@@ -221,6 +208,12 @@ main{
             color: var(--color-celeste-cuatro);
             border: 1.5px var(--color-azul-tres) solid;
             background-color: var(--color-azul-tres);
+            font-weight: bold;
+        }
+        .desactivado:active{
+            color: var(--color-celeste-cuatro);
+            border: 1.5px var(--color-azul-tres) solid;
+            background-color: lightcoral;
             font-weight: bold;
         }
     
@@ -250,4 +243,51 @@ main{
     .redes{
         width: 30px;
         margin: 5px 10px 10px;
+    }
+
+
+    /*MODO RESPONSIVE*/
+    @media screen and (max-width:425px) {
+        header{
+            margin: 0;
+            height: auto;
+            padding: 5px 20px;
+        }
+        .logo{
+            justify-content: center;
+        }
+        main{
+            align-items: center;
+            flex-direction: column;
+            height: auto;
+            margin: 0;
+            padding: 0 15px;
+        }
+        .texto-entrada,.texto-salida{
+            padding: 0;
+            margin-top: 15px;
+            width: auto;
+            max-width: 100%;
+        }
+        footer{
+            margin-top: 20px;
+        }
+        #imagen-texto-vacio{
+            width: 60%;
+            margin: 15px 0;
+        }
+        .salida-vacia{
+            padding: 15px;
+            align-items: center;
+        }
+        .salida-llena{
+            padding: 15px;
+        }
+        .div-botones{
+            display: block;
+            flex-direction: column;
+        }
+        #salida-texto{
+            width: 90%;
+        }
     }
