@@ -28,15 +28,17 @@
     </header>
     <main>
         <div class="texto-entrada">
-            <textarea name="entrada" id="entrada-textarea" cols="30" rows="10" placeholder="Ingrese el texto aqui..."
-                required></textarea>
-                <div>
+            <textarea name="entrada" id="entrada-textarea" cols="30" rows="10" placeholder="Ingrese el texto aqui..." required></textarea>
+            <div id="div-entrada-inferior">
+                <div id="div-advertencia">
                     <img src="svg/advertencia.svg" alt="Simbolo de advertencia advertencia" class="imgen-advertencia">
                     <p class="texto-advertencia">Solo letras minúsculas y sin acentos</p>
                 </div>
-            
-            <button class="boton" id="boton-Encriptar">Encriptar</button>
-            <button class="boton" id="boton-Desencriptar">Desencriptar</button>
+                <div id="div-botones">
+                    <button class="boton" id="boton-Encriptar">Encriptar</button>
+                    <button class="boton" id="boton-Desencriptar">Desencriptar</button>
+                </div>
+            </div>
         </div>
         <div class="texto-salida">
             <div class="salida-vacia" >
@@ -75,5 +77,6 @@
     </footer>
 </body>
 <script src="js/decodificador.js"></script>
+<script src="js/verificador.js"></script>
 
 </html>
