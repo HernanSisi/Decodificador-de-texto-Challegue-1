@@ -1,7 +1,6 @@
 var vacio=document.querySelector(".salida-vacia");
 var llena=document.querySelector(".salida-llena");
-
-llena.style.display = "none";
+var botonCopiar = document.querySelector("#boton-copiar");
 
 //llamando a los botones
 var botonEncriptar = document.querySelector("#boton-Encriptar");
@@ -46,4 +45,9 @@ botonDesencriptar.addEventListener("click", function(){
         botonEncriptar.classList.add("desactivado");
         botonDesencriptar.classList.add("desactivado");
     }
+})
+botonCopiar.addEventListener("click",function () {
+    var a1=document.querySelector("#salida-texto");
+    a1.select();
+    document.execCommand("copy");
 })
