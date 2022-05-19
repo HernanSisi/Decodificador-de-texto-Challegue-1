@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="encabezado">
         <div class="logo">
@@ -25,20 +27,54 @@
         </nav>
     </header>
     <main>
-
+        <div class="texto-entrada">
+            <textarea name="entrada" id="entrada-textarea" cols="30" rows="10" placeholder="Ingrese el texto aqui..."
+                required></textarea>
+                <div>
+                    <img src="svg/advertencia.svg" alt="Simbolo de advertencia advertencia" class="imgen-advertencia">
+                    <p class="texto-advertencia">Solo letras minúsculas y sin acentos</p>
+                </div>
+            
+            <button class="boton-encriptador">Encriptar</button>
+            <button class="boton-desencriptador">Desencriptar</button>
+        </div>
+        <div class="texto-salida">
+            <div class="salida-vacia" >
+                <img src="svg/Muñeco.svg" alt="sin resultados encontrados" id="imagen-texto-vacio">
+                <div>
+                    <h1 class="titulo-salida-vacia">
+                        Ningún mensaje fue encontrado
+                    </h1>
+                    <br>
+                    <p class="texto-salida-vacia">
+                        Ingresa el texto que desees encriptar o desencriptar.
+                    </p>
+                </div>
+            </div>
+            <div class="salida-llena" >
+                <textarea name="salida-texto" id="salida-texto" cols="30" rows="10" readonly>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod dolores quidem obcaecati nostrum commodi nemo praesentium, asperiores quisquam cum deleniti placeat tempora facere ratione omnis voluptatibus. Nihil voluptatum quod neque sint, voluptas eum perspiciatis quas a ratione modi perferendis? Voluptas doloremque dolorem obcaecati esse sapiente necessitatibus, rem tempore quo eveniet. Odio eligendi reprehenderit in repellat ratione tenetur totam reiciendis quibusdam eum tempore quam inventore voluptas dolores assumenda porro explicabo nostrum, asperiores magni quasi quos mollitia obcaecati. Dolorum error nulla exercitationem, amet, recusandae facere, corrupti eligendi officia ut mollitia rem quia sed tenetur delectus qui reiciendis aliquam? Cumque ea tenetur ut!</textarea>
+                <br>
+                <button class="boton-copiar">Copiar</button>
+            </div>
+        </div>
     </main>
-</body>
-<footer>
+    <footer>
         <svg alt="Logo de la pagina" id="logo-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.5 171.9">
             <g id="Layer_1" data-name="Layer 1">
-            <polygon class="cls-1" points="57.3 114.6 76.4 114.6 95.5 124.15 76.4 133.7 57.3 133.7 57.3 143.25 38.2 152.8 38.2 95.5 19.1 105.05 19.1 162.35 0 171.9 0 0 19.1 9.55 19.1 66.85 38.2 76.4 38.2 19.1 57.3 28.65 57.3 38.2 76.4 38.2 95.5 47.75 76.4 57.3 57.3 57.3 57.3 76.4 76.4 76.4 95.5 85.95 76.4 95.5 57.3 95.5 57.3 114.6"/>
+                <polygon class="cls-1"
+                    points="57.3 114.6 76.4 114.6 95.5 124.15 76.4 133.7 57.3 133.7 57.3 143.25 38.2 152.8 38.2 95.5 19.1 105.05 19.1 162.35 0 171.9 0 0 19.1 9.55 19.1 66.85 38.2 76.4 38.2 19.1 57.3 28.65 57.3 38.2 76.4 38.2 95.5 47.75 76.4 57.3 57.3 57.3 57.3 76.4 76.4 76.4 95.5 85.95 76.4 95.5 57.3 95.5 57.3 114.6" />
             </g>
-            </svg>
+        </svg>
         <p class="pie-pagina">By: Hernan Alejandro Sisi</p>
         <div id="footer-redes">
             <a class="link-profesionales" href="#"><img src="svg/linkedin.svg" alt="logo de Linkedin" class="redes"></a>
-            <a class="link-profesionales" href="https://twitter.com/hernansisi2002"><img src="svg/twitter.svg" alt="logo de twitter" class="redes"></a>
-            <a class="link-profesionales" href="https://github.com/HernanSisi"><img src="svg/github.svg" alt="logo de GitHub" class="redes"></a>
+            <a class="link-profesionales" href="https://twitter.com/hernansisi2002"><img src="svg/twitter.svg"
+                    alt="logo de twitter" class="redes"></a>
+            <a class="link-profesionales" href="https://github.com/HernanSisi"><img src="svg/github.svg"
+                    alt="logo de GitHub" class="redes"></a>
         </div>
-</footer>
+    </footer>
+</body>
+<script src="js/decodificador.js"></script>
+
 </html>
