@@ -10,4 +10,15 @@ textEntrada.addEventListener("input", function(){
     temp = temp.replace(/ó/gi, "o");
     temp = temp.replace(/ú/gi, "u");
     document.getElementById("entrada-textarea").value=temp;
+    if (texto.length>0) {
+        var botonEncriptar = document.querySelector("#boton-Encriptar");
+        var botonDesencriptar = document.querySelector("#boton-Desencriptar");
+        botonDesencriptar.classList.remove("desactivado");
+        botonEncriptar.classList.remove("desactivado");
+    } else if(texto.length==0){
+        var botonEncriptar = document.querySelector("#boton-Encriptar");
+        var botonDesencriptar = document.querySelector("#boton-Desencriptar");
+        botonDesencriptar.classList.add("desactivado");
+        botonEncriptar.classList.add("desactivado");
+    }
 })

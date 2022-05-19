@@ -141,6 +141,7 @@ main{
         background-color: white;
         transition: 0.3s;
         font-weight: bold;
+        cursor: pointer;
     }
     #div-advertencia{
         display: flex;
@@ -210,19 +211,25 @@ main{
             border: none;
             outline:none;
         }
-        .boton:hover{
+        .boton:hover:not(.desactivado){
             color: var(--color-azul-tres);
             border: 1.5px var(--color-azul-tres) solid;
             background-color: var(--color-celeste-cuatro);
             font-weight: bold;
         }
-        .boton:active{
+        .boton:active:not(.desactivado){
             color: var(--color-celeste-cuatro);
             border: 1.5px var(--color-azul-tres) solid;
             background-color: var(--color-azul-tres);
             font-weight: bold;
         }
     
+
+
+/*ESTILOS AUXILIARES*/
+    .desactivado{
+        cursor: not-allowed;
+    }
 
 /*ESTILOS DEL FOOTER*/
     footer{
